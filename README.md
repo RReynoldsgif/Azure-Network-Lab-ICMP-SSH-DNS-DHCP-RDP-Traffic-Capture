@@ -10,8 +10,10 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 
 - **Resource Group:** `hiphop-lab-rg`
 - **Virtual Machines:**
-  - `windows-vm` (Windows 10 Pro)
-  - `ubuntu-vm` (Ubuntu 22.04 LTS)
+  - ![image](https://github.com/user-attachments/assets/9c9de06c-ce7d-4baf-8da4-7714fffa341c)
+ (Windows 10 Pro)
+  - ![image](https://github.com/user-attachments/assets/add20a16-78c0-448d-8a1d-c5040e7a7cad)
+ (Ubuntu 22.04 LTS)
 - **Networking:**
   - Both VMs deployed on the same VNet/Subnet (`hiphop-vnet/default`)
   - RDP access enabled for Windows VM
@@ -35,7 +37,14 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Blocked ICMP using NSG, verified with packet loss and no replies.
 - Re-enabled ICMP, confirmed restored communication.
 
-> 📸 `Firewall_Blocked_Ping.png`  
+> 📸 `Firewall_Blocked_Ping.png`  ![image](https://github.com/user-attachments/assets/e5e791b8-d350-49a5-9fd7-15a3b8cd800d)
+> ![image](https://github.com/user-attachments/assets/40d26f0d-9843-465d-8847-fc623f49dc57)
+> ![image](https://github.com/user-attachments/assets/fb4b50f3-9e4c-4fb5-a1d2-a914f9a8e276)
+> ![image](https://github.com/user-attachments/assets/59cc5367-8411-46d0-b008-3f1fa33d0433)
+
+
+
+
 > *“Ping blocked via NSG - ICMP echo requests observed without replies.”*
 
 ---
@@ -45,7 +54,10 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Traffic filtered via port 22 in Wireshark.
 - Verified encrypted communication packets.
 
-> 📸 `Wireshark_SSH_Traffic.png`  
+> 📸 ![image](https://github.com/user-attachments/assets/1b164e57-8ee1-466d-9b63-f340d4d0bd84)
+> ![image](https://github.com/user-attachments/assets/1bfd7f64-13c0-4c0a-8d75-be11e54c0e21)
+
+`Wireshark_SSH_Traffic.png`  
 > *“SSH traffic over port 22 captured using Wireshark.”*
 
 ---
@@ -54,7 +66,8 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Used `nslookup` to resolve domains.
 - Observed DNS request/response packets.
 
-> 📸 `Wireshark_DNS_Traffic.png`  
+> 📸 ![image](https://github.com/user-attachments/assets/56dea127-d809-4e30-a5b7-6668be6d9d4b)
+`Wireshark_DNS_Traffic.png`  
 > *“DNS queries to google.com and disney.com observed in Wireshark.”*
 
 ---
@@ -63,7 +76,8 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Renewed IP in Windows with `ipconfig /renew`.
 - Captured DHCP broadcast/acknowledgment.
 
-> 📸 `Wireshark_DHCP_Traffic.png`  
+> 📸 `Wireshark_DHCP_Traffic.png`  ![image](https://github.com/user-attachments/assets/b506dedc-08da-4abb-a36c-f747c401d4de)
+
 > *“Dynamic IP address renewal captured in Azure via DHCP.”*
 
 ---
@@ -72,7 +86,8 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Observed continuous RDP traffic on port 3389.
 - Explained constant data stream due to session streaming.
 
-> 📸 `Wireshark_RDP_Traffic.png`  
+> 📸 ![image](https://github.com/user-attachments/assets/e5e3632a-f8de-4eab-ba7b-99cd4a021a71)
+`Wireshark_RDP_Traffic.png`  
 > *“Nonstop RDP data flow showing live screen sharing traffic between client and host.”*
 
 ---
@@ -89,23 +104,6 @@ This project demonstrates the deployment of two Azure Virtual Machines (Windows 
 - Custom firewall (NSG) configuration
 - Network protocol filtering and packet analysis
 - Real-world troubleshooting using Wireshark
-
----
-
-## 🎧 Why “Hip-Hop Lab”?
-
-Because IT should be dope too. Just like a hip-hop beat—everything in sync, flowing through the network with rhythm. This project blends structure, creativity, and control—just like a good track.
-
----
-
-## 📁 Screenshots
-
-Screenshots included in `/screenshots` folder with filenames like:
-- `Azure_VM_Deployment.png`
-- `Wireshark_ICMP_Filter.png`
-- `SSH_Traffic_Capture.png`
-- `DNS_Query_Traffic.png`
-- `Firewall_Rule_Example.png`
 
 ---
 
